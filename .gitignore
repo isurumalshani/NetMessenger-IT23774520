@@ -4,3 +4,4 @@ test_client
 *.log
 storage/
 screenshots/
+testfile.txt
