@@ -1,0 +1,18 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -pthread
+
+SERVER = server_4520
+CLIENT = client_4520
+
+all: $(SERVER) $(CLIENT)
+
+$(SERVER): server_4520.c
+	$(CC) $(CFLAGS) server_4520.c -o $(SERVER)
+
+$(CLIENT): client_4520.c
+	$(CC) $(CFLAGS) client_4520.c -o $(CLIENT)
+
+clean:
+	rm -f $(SERVER) $(CLIENT)
+
+rebuild: clean all
